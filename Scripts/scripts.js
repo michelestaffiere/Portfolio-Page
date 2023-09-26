@@ -43,8 +43,8 @@ const typeEffect = () => {
 
 // Boot up animations
 const header = document.querySelector("header");
-typeEffect();
-header.classList.add("firstView")
+header.classList.add("firstView");
+setTimeout(()=>typeEffect(),200);
 
 
 

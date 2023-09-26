@@ -166,7 +166,8 @@ h1 span.typing::before{
  
 
 
-/* Projects divider */
+/* DIVIDERS*/
+/*  projects divider */
 .divider{
     position: relative;
 }
@@ -187,7 +188,7 @@ h1 span.typing::before{
 }
 .waves{
     margin: 10rem 0 3rem 0;
-    background-color: #ffffff22;
+    background-color: #ffffff34;
     text-align: center;
     padding: 15rem;
     --mask:
@@ -196,9 +197,14 @@ h1 span.typing::before{
     -webkit-mask: var(--mask);
     mask: var(--mask);
     transform: skewY(-10deg);
-
 }
-/* projects display */
+
+
+
+
+
+
+/* PROJECT STYLES */
 .work{
     display: flex;
     margin-bottom: 8rem;
@@ -231,8 +237,55 @@ h1 span.typing::before{
 }
 .project-brief p{
     font-size: 1.25em;
-
 }
+/* STACK UL (Projects) & */
+.stack , .links{
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+.stack{
+    margin-bottom: 2rem;
+}
+.stack li img,.links li img{
+    width: 50px;
+}
+.stack .html-css{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-right: .5rem;
+}
+.stack .html-css img{
+    position: relative;
+}
+
+.stack .html-css img:nth-child(1){
+    width: 50px;
+    left:1rem;
+     z-index: 98;/* on top of HTML svg. */
+}
+/* END OF PROJECT STYLES  */
+
+
+/* MY STORY */
+
+/* create a timeline?? sounds cool to me atm! */
+.about{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.story-block{
+    padding: 2.5rem;
+    height: fit-content;
+    width: 50%;
+    background-color: #d272c9;
+    z-index: 3;
+}
+
 
 /* Bottom wave Cover. */
 .bottom-waves{
@@ -240,6 +293,7 @@ h1 span.typing::before{
     position: fixed;
     bottom: 0;
     height: 10rem;
+     z-index: 99;/* always on top */
 }
 .top-wave{
     position: absolute;
@@ -250,3 +304,4 @@ h1 span.typing::before{
     height: 6rem;
     opacity: .5;
 }
+`
