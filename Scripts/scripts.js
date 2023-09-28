@@ -40,6 +40,23 @@ const typeEffect = () => {
 };
 
 
+// Toronto Skyline SVG animation on view.
+// scrapped  this idea (2023-09-28), keeping js incase mind changes.
+const storyBlock = document.querySelector(".story-block");
+const torontoSvgContainer = document.querySelector(".skylineContainer")
+const torontoSvgPath = document.querySelector("svg.torontoSkyline path")
+
+
+const observeStoryBlock = new IntersectionObserver(entries =>{
+  entries.forEach(entry =>{
+    if(entry.isIntersecting){
+      torontoSvgContainer.classList.add("visible");
+      torontoSvgPath.classList.add('torontoSkyline-1');
+    }
+  });
+});
+
+//observeStoryBlock.observe(storyBlock);
 
 // Boot up animations
 const header = document.querySelector("header");

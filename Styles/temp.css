@@ -188,7 +188,7 @@ h1 span.typing::before{
 }
 .waves{
     margin: 10rem 0 3rem 0;
-    background-color: #ffffff34;
+    background-color: #91919133;
     text-align: center;
     padding: 15rem;
     --mask:
@@ -270,22 +270,88 @@ h1 span.typing::before{
 
 
 /* MY STORY */
-
-/* create a timeline?? sounds cool to me atm! */
 .about{
-    display: flex;
-    justify-content: end;
+    margin-top: 0rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .story-block{
     padding: 2.5rem;
     height: fit-content;
-    width: 50%;
-    background-color: #d272c9;
-    z-index: 3;
+    width: 100%;
+    border: 2px solid #9e5597;
+    border-radius: 15px;
+    text-align: center;
+}
+.story-block h2{
+    font-size: 2rem;
+}
+.story-block p{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.story-block p span{
+    font-size: 1rem;
+    color: #9e5597;
+}
+.story-block button{
+    /* border: 2px solid #9e5597; */
+    background:none;
+    padding: 5px;
+    transition: .25s linear;
+}
+.story-block button a{
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .25s linear;
+    color:white ;
 }
 
+.story-block button:hover a,.story-block button:hover{ 
+    color:#6a1762;
+    border-color: #6a1762;
+}
+
+.story-block button:active, .story-block button:active a {
+    color: #cf91c9;
+    border-color: #cf91c9;
+}
+
+
+/* TORONTO SVG LINE PATH ANIMATION - GENERATED USING Artista */
+/* @-webkit-keyframes animate-svg-stroke-1 {
+    0% {
+      stroke-dashoffset: 6451.0673828125px;
+      stroke-dasharray: 6451.0673828125px;
+    }
+  
+    100% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 6451.0673828125px;
+    }
+  }
+  
+  @keyframes animate-svg-stroke-1 {
+    0% {
+      stroke-dashoffset: 6451.0673828125px;
+      stroke-dasharray: 6451.0673828125px;
+    }
+  
+    100% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 6451.0673828125px;
+    }
+  }
+  
+  .torontoSkyline-1 {
+    -webkit-animation: animate-svg-stroke-1 4s ease-in 0s both;
+            animation: animate-svg-stroke-1 4s ease-in 0s both;
+  } */
+  
 
 /* Bottom wave Cover. */
 .bottom-waves{
@@ -304,4 +370,6 @@ h1 span.typing::before{
     height: 6rem;
     opacity: .5;
 }
-`
+
+
+
