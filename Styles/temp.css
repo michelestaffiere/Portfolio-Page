@@ -321,7 +321,6 @@ h1 span.typing::before{
     border-color: #cf91c9;
 }
 
-
 /* TORONTO SVG LINE PATH ANIMATION - GENERATED USING Artista */
 /* @-webkit-keyframes animate-svg-stroke-1 {
     0% {
@@ -352,6 +351,93 @@ h1 span.typing::before{
             animation: animate-svg-stroke-1 4s ease-in 0s both;
   } */
   
+
+/* Contact section + Form */
+
+.contact{
+    padding: 2rem 15rem;
+    outline: 2px solid limegreen;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    margin-bottom: 15rem;
+}
+.speechBubbles{
+    position: absolute;
+    left: 20%;
+    top: -5%;
+    z-index: -1;
+}
+.speechBubbles img{
+    width: 55%;
+}
+.contact .formContainer {
+    /* outline:1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.contact .formContainer fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border :none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.formContainer fieldset div{
+    position: relative;
+}
+fieldset div .formLabel{
+    color: rgba(255, 255, 255, 0.356);
+    position: absolute;
+    left: 2%;
+    top: 1%;
+    transition: .25s linear;
+}
+
+fieldset div .focused{
+    scale: .8;
+    color: #cf91c9;
+    transform: translateY(-115%);
+}
+
+.formContainer fieldset input,
+.formContainer fieldset textarea,
+.contact .formContainer .submit{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #6a1762 ;
+    padding: 2px;
+    border-radius: 15px;
+    resize: none;
+}
+
+
+
+/* .formContainer fieldset input,
+.formContainer fieldset textarea{
+    position: relative;
+}
+
+.formLabel{
+    position: absolute;
+    top:0;
+} */
+
+
+
+.contact .formContainer .submit{
+    width: fit-content;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+
+
+
+
 
 /* Bottom wave Cover. */
 .bottom-waves{
