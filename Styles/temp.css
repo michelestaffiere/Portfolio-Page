@@ -173,7 +173,7 @@ h1 span.typing::before{
 }
 .divider h2{
     font-size: 10rem;
-    position: absolute;
+    position: relative;
     color: #9f2994;
     inset: 8rem;
     z-index: 1;
@@ -218,15 +218,15 @@ h1 span.typing::before{
     border-radius: 15px;
 }
 .work-images .desktop{
-    width: 40rem;
+    width: 35rem;
     border: 2px solid #6a1762;
 }
 .work-images .mobile{
-    width: 8rem;
+    width: 6rem;
     border: 2px solid #9f2994;
     position: absolute;
     filter: drop-shadow(6px -4px 14px #000000);
-    transform: translateY(30px) translateX(-45rem);
+    transform: translateY(7rem) translateX(-37rem);
 }
 .project-brief{
     flex: 1;
@@ -243,13 +243,21 @@ h1 span.typing::before{
     padding: 0;
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: 1.5rem;
+}
+.stack a,
+.links a{
+    cursor: pointer;
 }
 .stack{
     margin-bottom: 2rem;
 }
+.links{
+    margin: 0;
+}
 .stack li img,.links li img{
-    width: 50px;
+    width: 40px;
+    cursor: pointer;
 }
 .stack .html-css{
     display: flex;
@@ -282,8 +290,7 @@ h1 span.typing::before{
     padding: 2.5rem;
     height: fit-content;
     width: 100%;
-    border: 2px solid #9e5597;
-    border-radius: 15px;
+    border-top: 2px solid #9e5597;
     text-align: center;
 }
 .story-block h2{
@@ -358,17 +365,106 @@ h1 span.typing::before{
     width: 100%;
     position: fixed;
     bottom: 0;
-    height: 10rem;
-     z-index: 99;/* always on top */
+    height: 10%;
+    z-index: 98;/* always on top of everything but not outgoing project links */
 }
 .top-wave{
     position: absolute;
+    bottom: 0;
+    height: 75%;
 }
 .bottom-wave{
     position: absolute;
     bottom: 0;
-    height: 6rem;
-    opacity: .5;
+    height: 50%;
+    /* opacity: .5; */
+}
+
+
+/* Small Devices (previous iphone generations, 375px and smaller) */
+@media (min-width:375px){
+    /* essential disable wrapper, use all available screen size. */
+    .wrapper{
+        width: 100%;
+        margin: 0;
+    }
+    .divider .waves{
+        margin: 0;
+        padding: 6rem;
+    }
+    .story-block{
+        padding: 1rem;
+    }
+    .work{
+        margin-bottom: 3rem;
+    }
+}
+
+
+/* Mobile Screens (current Iphones and most Android's,  500px - 376) */
+@media (max-width:500px){
+    /* general */
+    /* reset wrapper back to normal from previous @media */
+    .wrapper{ max-width:1400px; width:80%; margin:0 auto;}
+    html{
+        overflow-x: hidden;
+    }
+    body{
+    text-align: center;
+    overflow-x: hidden;
+ }
+ section{
+    margin-block: 5rem;
+ }
+ /* Project showcase */
+ .works{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0;
+ }
+ .work{
+    flex-direction: column;
+ }
+ .work .work-images .desktop{
+    display: none;
+ }
+ .work .work-images .mobile{
+    position: static;
+    transform: translateX(0) translateY(0);
+    width: 8rem;
+}
+.work .links, .work .stack{
+    display: flex;
+    justify-content: center;
+}
+.divider{
+    text-align: left;
+}
+.divider h2{
+    font-size: 4rem;
+    margin: 0;
+    inset:2rem;
+    top: 5rem;
+}
+.divider h2 span{
+    font-size: 2rem;
+    bottom: 5rem;
+}
+/* about */
+.about{
+    width: 90%;
+}
+.about .torontoSkyline{
+    width: 50%;
+}
+.about .story-block p{
+    font-size: 1rem;
+}
+.bottom-waves{
+    right: 50%;
+    width: 100%;
+}
 }
 
 
