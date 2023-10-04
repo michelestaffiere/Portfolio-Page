@@ -1,0 +1,360 @@
+/* Nav */
+nav ul {
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5rem;
+  list-style: none;
+}
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: rem;
+  height: 100vh;
+}
+.firstView {
+  animation: firstView 1s ease-in;
+}
+@keyframes firstView {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Brief desc. */
+h1 {
+  font-size: 3rem;
+}
+h1 span .last-name {
+  position: absolute;
+}
+h1 span.typing {
+  font-size: 2rem;
+  position: relative;
+  color: violet;
+  transition: 0.5s linear;
+}
+h1 span.typing:empty::before {
+  display: none;
+}
+h1 span.typing::before {
+  content: "";
+  position: absolute;
+  top: 52%;
+  right: -4%;
+  transform: translateY(-50%);
+  height: 2rem;
+  width: 0.25rem;
+  background: violet;
+  animation: blink 0.5s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Hero Image + rotating text. */
+.hero-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: url(/Assets/myFace.png);
+  background-size: cover;
+  filter: grayscale(1);
+  border-radius: 50%;
+}
+.rotating-text {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 30s linear infinite;
+}
+.rotating-text span {
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  font-size: 1.5rem;
+  transform-origin: 0 9.5rem;
+}
+@keyframes rotateText {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* DIVIDERS*/
+/* projects divider */
+.divider {
+  position: relative;
+}
+.divider h2 {
+  font-size: 10rem;
+  position: relative;
+  color: #9f2994;
+  inset: 8rem;
+  z-index: 1;
+}
+.divider h2 span {
+  font-size: 3rem;
+  color: #9f2994;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.waves {
+  margin: 10rem 0 3rem 0;
+  background-color: #91919133;
+  text-align: center;
+  padding: 15rem;
+  --mask: radial-gradient(
+        calc(4.47rem + 0.5px) at 50% calc(100% + 4rem),
+        #0000 calc(99% - 1px),
+        #000 calc(101% - 1px) 99%,
+        #0000 101%
+      )
+      calc(50% - 4rem) calc(50% - 1rem - 0.5px + 0.5px) / 8rem calc(2rem + 1px),
+    radial-gradient(
+        calc(4.47rem + 0.5px) at 50% -4rem,
+        #0000 calc(99% - 1px),
+        #000 calc(101% - 1px) 99%,
+        #0000 101%
+      )
+      50% calc(50% + 1rem + 0.5px) / 8rem calc(2rem + 1px);
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  transform: skewY(-10deg);
+}
+
+/* PROJECT STYLES */
+.work {
+  display: flex;
+  margin-bottom: 8rem;
+  gap: 2rem;
+}
+.work-images {
+  position: relative;
+}
+
+.work-images .desktop,
+.work-images .mobile {
+  border-radius: 15px;
+}
+.work-images .desktop {
+  width: 35rem;
+  border: 2px solid #6a1762;
+}
+.work-images .mobile {
+  width: 6rem;
+  border: 2px solid #9f2994;
+  position: absolute;
+  filter: drop-shadow(6px -4px 14px #000000);
+  transform: translateY(7rem) translateX(-37rem);
+}
+.project-brief {
+  flex: 1;
+}
+.project-brief h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.project-brief p {
+  font-size: 1.25em;
+}
+/* STACK UL (Projects) & */
+.stack,
+.links {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.stack a,
+.links a {
+  cursor: pointer;
+}
+.stack {
+  margin-bottom: 2rem;
+}
+.links {
+  margin: 0;
+}
+.stack li img,
+.links li img {
+  width: 40px;
+  cursor: pointer;
+}
+.stack .html-css {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-right: 0.5rem;
+}
+.stack .html-css img {
+  position: relative;
+}
+
+.stack .html-css img:nth-child(1) {
+  width: 50px;
+  left: 1rem;
+  z-index: 98; /* on top of HTML svg. */
+}
+/* END OF PROJECT STYLES */
+
+/* MY STORY */
+.about {
+  margin-top: 0rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-block {
+  padding: 2.5rem;
+  height: fit-content;
+  width: 100%;
+  border-top: 2px solid #9e5597;
+  text-align: center;
+}
+.story-block h2 {
+  font-size: 2rem;
+}
+.story-block p {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.story-block p span {
+  font-size: 1rem;
+  color: #9e5597;
+}
+.story-block button {
+  /* border: 2px solid #9e5597; */
+  background: none;
+  padding: 5px;
+  transition: 0.25s linear;
+}
+.story-block button a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s linear;
+  color: white;
+}
+
+.story-block button:hover a,
+.story-block button:hover {
+  color: #6a1762;
+  border-color: #6a1762;
+}
+
+.story-block button:active,
+.story-block button:active a {
+  color: #cf91c9;
+  border-color: #cf91c9;
+}
+
+/* TORONTO SVG LINE PATH ANIMATION - GENERATED USING Artista */
+/* @-webkit-keyframes animate-svg-stroke-1 {
+    0% {
+    stroke-dashoffset: 6451.0673828125px;
+    stroke-dasharray: 6451.0673828125px;
+    }
+    
+    100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 6451.0673828125px;
+    }
+    }
+    
+    @keyframes animate-svg-stroke-1 {
+    0% {
+    stroke-dashoffset: 6451.0673828125px;
+    stroke-dasharray: 6451.0673828125px;
+    }
+    
+    100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 6451.0673828125px;
+    }
+    }
+    
+    .torontoSkyline-1 {
+    -webkit-animation: animate-svg-stroke-1 4s ease-in 0s both;
+    animation: animate-svg-stroke-1 4s ease-in 0s both;
+    } */
+
+/* Bottom wave Cover. */
+.bottom-waves {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 10%;
+  z-index: 98; /* always on top of everything but not outgoing project links */
+}
+.top-wave {
+  position: absolute;
+  bottom: 0;
+  height: 75%;
+}
+.bottom-wave {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  /* opacity: .5; */
+}

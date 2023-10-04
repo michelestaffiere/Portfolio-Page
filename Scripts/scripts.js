@@ -83,7 +83,7 @@ const formspreeHandling = () =>{
 
 const formLabels = document.querySelectorAll(".formLabel");
 const formInputs = document.querySelectorAll(".formInput");
-
+console.log(formInputs,formLabels);
 
 /** 
  *  formLabelAnimation
@@ -96,14 +96,16 @@ const formLabelAnimation = (inputs,labels) =>{
     const label = labels[index];
     input.addEventListener("focus",()=>{
       label.classList.add("focused");
-    });
+    }
+    );
 
     inputs.forEach((input,index)=>{
       const label = labels[index];
       input.addEventListener("blur",()=>{
         label.classList.remove("focused");
+        input.value = "";
       })
-    });
+    })
   })
 };
 
