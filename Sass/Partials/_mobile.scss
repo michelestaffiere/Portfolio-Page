@@ -1,0 +1,104 @@
+/* Mobile */
+@media (max-width: 375px) {
+    html {
+      overflow-x: hidden;
+    }
+    body {
+      text-align: center;
+      overflow-x: hidden;
+      font-size: .8rem;
+    }
+    /* increase wrapper width to allocate more screen-space to users */
+    .wrapper {
+      width: 90%;
+      margin: 0 auto;
+    }
+    /*Back to Top button  */
+    .backToTop{
+      width: 35px;
+      top: 88%;
+      right: 3%;
+    }
+    /* Dividers */
+    .divider {
+        text-align: left;
+      }
+      .divider h2 {
+        font-size: 4rem;
+        margin: 0;
+        left: 2rem;
+        top: 8rem;
+      }
+      .divider h2 span {
+        font-size: 1.25rem;
+      }
+    .divider .waves {
+      margin: 0;
+      padding: 6rem;
+    }
+    .story-block {
+      padding: 1rem;
+    }
+    .work {
+      margin-bottom: 3rem;
+      flex-direction: column;
+      align-items: center;
+    }
+    .work .project-brief{
+        width: 90%;
+    }
+    .works {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 0;
+    }
+   
+    .work .work-images .desktop {
+      display: none;
+    }
+    .work .work-images .mobile {
+      position: static;
+      transform: translateX(0) translateY(0);
+      width: 8rem;
+    }
+    .work .links,
+    .work .stack {
+      display: flex;
+      justify-content: center;
+    }
+    .stack li img,
+     .links li img{
+        width: 30px;
+    }
+    .stack .html-css img:nth-child(1){
+        width: 30px;
+    }
+
+    /* about */
+    .about {
+
+    }
+    .about .torontoSkyline {
+      width: 50%;
+    }
+    .about .story-block p {
+      font-size: 1rem;
+    }
+    .bottom-waves {
+      right: 50%;
+      width: 100%;
+    }
+
+    /* Contact form */
+    .contact{
+        background-position:0px;
+        margin-bottom: 5rem;
+       }
+    .contact form{
+        width: 100%;
+    }
+    .contact fieldset{
+        width: 80%;
+    }
+  }

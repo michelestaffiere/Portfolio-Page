@@ -1,0 +1,16 @@
+/* Back To Top button */
+
+.backToTop{
+    position: fixed;
+    width: 50px;
+    top: 85%;
+    right: 5%;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: .25s linear;
+    z-index: 99;
+    cursor: pointer;
+  }
+  .backToTop img{
+    width: 100%;
+  }

@@ -63,19 +63,19 @@ const formspreeHandling = () =>{
           }
         }).then(response => {
           if (response.ok) {
-            status.innerHTML = "//Thank you for reaching out!";
+            status.innerHTML = "Thank you for reaching out!";
             form.reset()
           } else {
             response.json().then(data => {
               if (Object.hasOwn(data, 'errors')) {
                 status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
               } else {
-                status.innerHTML = "//Oops! please try again later."
+                status.innerHTML = "Oops! please try again later."
               }
             })
           }
         }).catch(error => {
-          status.innerHTML = "//Oops! please try again later."
+          status.innerHTML = "Oops! please try again later."
         });
       }
       form.addEventListener("submit", handleSubmit)
@@ -88,8 +88,9 @@ console.log(formInputs,formLabels);
 /** 
  *  formLabelAnimation
  * Adds an animation to labels whose corresponding inputs have been focused.
- * @param {Node|NodeList} inputs - Nodelist of inputs to be targeted.
- * @param {Node|NodeList} labels - Corresponding NodeList of labels related to inputs
+ * @param {NodeList} inputs - Nodelist of inputs to be targeted.
+ * @param {NodeList} labels - Corresponding NodeList of labels related to inputs
+ * @returns {void} - returns nothing, only changes classes of targeted elements
 */
 const formLabelAnimation = (inputs,labels) =>{
   inputs.forEach((input,index)=>{
@@ -98,16 +99,39 @@ const formLabelAnimation = (inputs,labels) =>{
       label.classList.add("focused");
     }
     );
-
     inputs.forEach((input,index)=>{
       const label = labels[index];
       input.addEventListener("blur",()=>{
         label.classList.remove("focused");
-        input.value = "";
       })
     })
   })
 };
+
+
+const backToTopDiv = document.querySelector(".backToTop");
+/**
+ * BackToTop
+ * Displays a button at a certain Y index  that brings the user back to the top of the page.
+ * @param {HTMLElement} element - Element to attach event listener to, and change styles of.
+ * @returns {void} returns nothing, only resets the scrollY position to 0.
+ */
+  const backToTop = (element) =>{
+    element.addEventListener("click", ()=>{
+      window.scrollTo(0,0);
+    });
+    window.addEventListener("scroll",()=>{
+      const scrollY = window.scrollY;
+      if(scrollY > 300){
+        element.style.transform = "translateX(0)";
+        element.style.opacity = "1";
+      } else{
+          element.style.transform = "translateX(500%)";
+          element.style.opacity = "0";
+      }
+    });
+  };
+
 
 // Note: scrapped  this idea (2023-09-28), keeping js incase mind changes.
 
@@ -134,6 +158,7 @@ const formLabelAnimation = (inputs,labels) =>{
 setTimeout(()=>typeEffect(),200);
 formspreeHandling();
 formLabelAnimation(formInputs,formLabels);
+backToTop(backToTopDiv);
 
 
 

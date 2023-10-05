@@ -1,0 +1,25 @@
+/* Nav */
+nav{
+    margin: 0 auto;
+    border-bottom: 1px rgba(255, 255, 255, 0.231) solid;
+    width: fit-content;
+}
+nav ul {
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    list-style: none;
+  }
+  nav ul a {
+    color: white;
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: .15s linear;
+  }
+  nav ul a:hover{
+    color: #cf91c9;
+  }
+  

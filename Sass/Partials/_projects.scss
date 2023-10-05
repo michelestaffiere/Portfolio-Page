@@ -1,0 +1,76 @@
+  /* PROJECT STYLES */
+  .works{
+    margin-top: 12.5rem;
+  }
+  .work {
+    display: flex;
+    margin-bottom: 8rem;
+    gap: 2rem;
+  }
+  .work-images {
+    position: relative;
+  }
+  
+  .work-images .desktop,
+  .work-images .mobile {
+    border-radius: 5px;
+  }
+  .work-images .desktop {
+    width: 35rem;
+    border: 2px solid #6a1762;
+  }
+  .work-images .mobile {
+    width: 6rem;
+    border: 2px solid #9f2994;
+    position: absolute;
+    filter: drop-shadow(6px -4px 14px #000000);
+    transform: translateY(7rem) translateX(-37rem);
+  }
+  .project-brief {
+    flex: 1;
+  }
+  .project-brief h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .project-brief p {
+    font-size: 1.25em;
+  }
+   /* STACK UL (Projects) & */
+   .stack,
+   .links {
+     padding: 0;
+     display: flex;
+     list-style: none;
+     gap: 1.5rem;
+   }
+   .stack a,
+   .links a {
+     cursor: pointer;
+   }
+   .stack {
+     margin-bottom: 2rem;
+   }
+   .links {
+     margin: 0;
+   }
+   .stack li img,
+   .links li img {
+     width: 40px;
+     cursor: pointer;
+   }
+   .stack .html-css {
+     display: flex;
+     justify-content: center;
+     position: relative;
+     padding-right: 0.5rem;
+   }
+   .stack .html-css img {
+     position: relative;
+   }
+   
+   .stack .html-css img:nth-child(1) {
+     width: 50px;
+     left: 1rem;
+     z-index: 98; /* on top of HTML svg. */
+   }

@@ -1,0 +1,95 @@
+/* Contact Form */
+.contact{
+    margin-bottom:5rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background-image: url("/Assets/speechBubblesvg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100px;
+   }
+   .contact h2{
+       margin-bottom: 1.25rem;
+       color:#9f2994;
+   }
+   .contact form{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width:  100%;
+       border: none;
+   }
+   .contact form .submit{
+       width: fit-content;
+       padding: 5px 15px;
+       border-radius: 5px;
+       border: none;
+       background-color: #9e5597;
+       transition: .25s ease-in-out;
+   }
+   .contact form .submit:hover, .contact form .submit:focus{
+       background-color: #9e5597b8;
+   }
+   .contact fieldset{
+       display: flex;
+       flex-direction: column;
+       width: 50%;
+       padding: 0;
+       border: none;
+   }
+   .inputContainer{
+       position: relative;
+       margin-bottom: 2.5rem;
+   }
+   .inputContainer .formLabel{
+       position: absolute;
+       left: 15px;
+       font-size: 1.15rem;
+       transition: .25s ease-in-out;
+       color: gray;
+   }
+    .inputContainer .focused{
+       transform: scale(1.15) translateY(-25px);
+       color: #cf91c9;
+   }
+   .inputContainer .formInput , textarea{
+       width: 100%;
+       resize: none;
+       border: none; 
+       border-bottom: 1px solid grey;
+       padding: 5px;
+       background-color: rgba(0, 0, 0, 0);
+       transition: .2s linear;
+   }
+   .inputContainer .formInput , textarea{
+     color: #0000;
+   }
+   .inputContainer .formInput:focus , textarea:focus{
+       border: #cf91c9 1px solid;
+       outline: none;
+       background-color: rgba(0, 0, 0, 0.500);
+       color: white;
+   }
+   
+   .contact ul{
+     margin: 0;
+     padding: 0;
+     display: flex;
+     gap: 1rem;
+   }
+   .contact ul li{
+     list-style-type: none;
+     width: 45px;
+   }
+   .contact li img{
+     width: 100%;
+     transition: .2s ease-in-out;
+   }
+   .contact li img:hover, 
+   .contact li img:focus, 
+   .contact li img:target{
+     transform: scale(1.1);
+   }

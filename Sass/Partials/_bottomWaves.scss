@@ -1,0 +1,19 @@
+  /* Bottom wave Cover. */
+  .bottom-waves {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    z-index: 98; /* always on top of everything but not outgoing project links */
+  }
+  .top-wave {
+    position: absolute;
+    bottom: 0;
+    height: 75%;
+  }
+  .bottom-wave {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    /* opacity: .5; */
+  }

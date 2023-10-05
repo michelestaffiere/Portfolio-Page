@@ -1,0 +1,55 @@
+  /* MY STORY */
+  .about {
+    margin-top: 5.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .story-block {
+    padding: 2.5rem;
+    height: fit-content;
+    width: 100%;
+    border-top: 2px solid #9e5597;
+  }
+  .story-block h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .story-block p {
+    font-size: 1.25rem;
+  }
+  .story-block p span, .story-block p span:nth-child(2)  {
+    color: #9e5597;
+  }
+  .story-block p span:nth-child(2){
+    font-size: 1.5rem;
+    color: red;
+  }
+
+  .story-block button {
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #9e5597;
+    transition: .25s ease-in-out;
+  }
+  .story-block button a {
+    font-size: 1.15rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s linear;
+    color: white;
+  }
+  
+  .story-block button:hover {
+    background-color: #9e5597b8;
+  }
+  
+  .story-block button:active,
+  .story-block button:active a {
+    color: #cf91c9;
+    border-color: #cf91c9;
+  }

@@ -1,0 +1,45 @@
+ /* DIVIDERS*/
+  /* projects divider */
+  .divider {
+    position: relative;
+  }
+  .divider h2 {
+    margin: 0;
+    font-size: 8rem;
+    position: relative;
+    color: #9f2994;
+    z-index: 1;
+    top: 20rem;
+    left: 15rem;
+    display: inline;
+  }
+  .divider h2 span {
+    font-size: 2.5rem;
+    color: white;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    z-index: 1;
+  }
+  .waves {
+    background-color: #d6d6d633;
+    text-align: center;
+    padding: 9rem;
+    --mask: radial-gradient(
+          calc(4.47rem + 0.5px) at 50% calc(100% + 4rem),
+          #0000 calc(99% - 1px),
+          #000 calc(101% - 1px) 99%,
+          #0000 101%
+        )
+        calc(50% - 4rem) calc(50% - 1rem - 0.5px + 0.5px) / 8rem calc(2rem + 1px),
+      radial-gradient(
+          calc(4.47rem + 0.5px) at 50% -4rem,
+          #0000 calc(99% - 1px),
+          #000 calc(101% - 1px) 99%,
+          #0000 101%
+        )
+        50% calc(50% + 1rem + 0.5px) / 8rem calc(2rem + 1px);
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    transform: skewY(-10deg);
+  }

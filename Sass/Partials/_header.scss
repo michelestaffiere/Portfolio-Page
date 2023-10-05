@@ -1,0 +1,122 @@
+  /* Header */
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  .firstView {
+    animation: firstView 1s ease-in;
+  }
+  @keyframes firstView {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 0.2;
+    }
+    40% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    60% {
+      opacity: 0.5;
+    }
+    70% {
+      opacity: 0.6;
+    }
+    80% {
+      opacity: 0.7;
+    }
+    90% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Brief desc. */
+  h1 {
+    font-size: 3rem;
+  }
+  h1 span .last-name {
+    position: absolute;
+  }
+  h1 span.typing {
+    font-size: 2rem;
+    position: relative;
+    color: violet;
+    transition: 0.5s linear;
+  }
+  h1 span.typing:empty::before {
+    display: none;
+  }
+  h1 span.typing::before {
+    content: "";
+    position: absolute;
+    top: 52%;
+    right: -4%;
+    transform: translateY(-50%);
+    height: 2rem;
+    width: 0.25rem;
+    background: violet;
+    animation: blink 0.5s infinite;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Hero Image + rotating text. */
+  .hero-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: url(/Assets/myFace.png);
+    background-size: cover;
+    filter: grayscale(1);
+    border-radius: 50%;
+  }
+  .rotating-text {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotateText 30s linear infinite;
+  }
+  .rotating-text span {
+    font-weight: 700;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    font-size: 1.5rem;
+    transform-origin: 0 9.5rem;
+  }
+  @keyframes rotateText {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
