@@ -42,9 +42,8 @@
      padding: 0;
      display: flex;
      list-style: none;
-     gap: 1.5rem;
+     gap: 1.15rem;
    }
-   .stack a,
    .links a {
      cursor: pointer;
    }
@@ -57,20 +56,21 @@
    .stack li img,
    .links li img {
      width: 40px;
-     cursor: pointer;
+   }
+   .links li img{
+    cursor: pointer;
    }
    .stack .html-css {
      display: flex;
      justify-content: center;
      position: relative;
-     padding-right: 0.5rem;
+    //  padding-right: 0.5rem;
    }
    .stack .html-css img {
      position: relative;
    }
    
    .stack .html-css img:nth-child(1) {
-     width: 50px;
-     left: 1rem;
+     left: .25rem;
      z-index: 98; /* on top of HTML svg. */
    }
