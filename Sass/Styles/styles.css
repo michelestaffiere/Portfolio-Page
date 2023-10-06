@@ -749,7 +749,7 @@ h1 span.typing::before {
 }
 
 /* Mobile */
-@media (max-width: 375px) {
+@media (max-width: 475px) {
   html {
     overflow-x: hidden;
   }
