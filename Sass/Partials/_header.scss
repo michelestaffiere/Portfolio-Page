@@ -49,11 +49,17 @@
   h1 span .last-name {
     position: absolute;
   }
+
   h1 span.typing {
     font-size: 2rem;
     position: relative;
     color: violet;
     transition: 0.5s linear;
+  }
+  h1 span.mobileSubHeading{
+    font-size: 2rem;
+    color: violet;
+    display: none;
   }
   h1 span.typing:empty::before {
     display: none;

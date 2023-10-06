@@ -13,11 +13,19 @@
       width: 90%;
       margin: 0 auto;
     }
+
+    
     /*Back to Top button  */
     .backToTop{
       width: 35px;
       top: 88%;
       right: 3%;
+    }
+    h1 span.typing{
+      display: none;
+    }
+    h1 span.mobileSubHeading{
+      display: inline-block;
     }
     /* Dividers */
     .divider {

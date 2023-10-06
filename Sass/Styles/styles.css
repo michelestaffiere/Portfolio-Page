@@ -345,6 +345,12 @@ h1 span.typing {
   transition: 0.5s linear;
 }
 
+h1 span.mobileSubHeading {
+  font-size: 2rem;
+  color: violet;
+  display: none;
+}
+
 h1 span.typing:empty::before {
   display: none;
 }
@@ -510,7 +516,7 @@ h1 span.typing::before {
   font-size: 1.25em;
 }
 
-/* STACK UL (Projects) & */
+/* STACK UL (Projects) & Links */
 .stack,
 .links {
   padding: 0;
@@ -768,6 +774,12 @@ h1 span.typing::before {
     width: 35px;
     top: 88%;
     right: 3%;
+  }
+  h1 span.typing {
+    display: none;
+  }
+  h1 span.mobileSubHeading {
+    display: inline-block;
   }
   /* Dividers */
   .divider {
