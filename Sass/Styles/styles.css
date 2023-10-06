@@ -516,10 +516,9 @@ h1 span.typing::before {
   padding: 0;
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 1.15rem;
 }
 
-.stack a,
 .links a {
   cursor: pointer;
 }
@@ -535,6 +534,9 @@ h1 span.typing::before {
 .stack li img,
 .links li img {
   width: 40px;
+}
+
+.links li img {
   cursor: pointer;
 }
 
@@ -542,7 +544,6 @@ h1 span.typing::before {
   display: flex;
   justify-content: center;
   position: relative;
-  padding-right: 0.5rem;
 }
 
 .stack .html-css img {
@@ -550,8 +551,7 @@ h1 span.typing::before {
 }
 
 .stack .html-css img:nth-child(1) {
-  width: 50px;
-  left: 1rem;
+  left: 0.25rem;
   z-index: 98; /* on top of HTML svg. */
 }
 
