@@ -1,19 +1,7 @@
-// Rotating text hero animation
-const rotatingText = document.querySelector(".rotating-text p");
-rotatingText.innerHTML = rotatingText.innerText
-  .split("")
-  .map(
-    (character, index) =>
-      `<span style="transform:rotate(${
-        index * 9.5
-      }deg)">${character.toUpperCase()}</span>`
-  )
-  .join("");
 
-/**
- *Typing animation displayed at top of the page. 
- *  No Params, everything defined outside of function.
- */
+// Variables.
+const header = document.querySelector("header");
+header.classList.add("firstView");
 const span = document.querySelector(".typing");
 const words = [
   "Front-End Developer.",
@@ -24,7 +12,21 @@ const words = [
 let wordIndex = 0;
 let charIndex = 8;
 let isDeleting = false;
-const typeEffect = () => {
+
+/**
+ * TypeEffect
+ * Displays a type writer style animation for desktop screens only.
+ * no params, built to target the headers h2 span and nothing else, function will not work if the following required 
+ * variables are removed.
+ * @requires span 
+ * @requires words 
+ * @requires wordIndex 
+ * @requires charIndex 
+ * @requires isDeleting 
+ *  @returns {void} 
+ */
+
+export const typeEffect = () => {
   const currentWord = words[wordIndex];
   const currentChar = currentWord.substring(0, charIndex);
   // console.log(currentWord,currentChar)
@@ -41,14 +43,14 @@ const typeEffect = () => {
     setTimeout(typeEffect, 1000);
   }
 };
-const header = document.querySelector("header");
-header.classList.add("firstView");
 
 /**
  * Form Spree Handling
- *  preventing default formspree behaviour or redirecting away from page..
+ *  prevents default formspree behaviour of redirecting away from page.
+ * code provided by formspree.
+ *  @returns {void} 
  */
-const formspreeHandling = () =>{
+export const formspreeHandling = () =>{
   const form = document.getElementById("my-form");
       
       async function handleSubmit(event) {
@@ -81,18 +83,14 @@ const formspreeHandling = () =>{
       form.addEventListener("submit", handleSubmit)
   };
 
-const formLabels = document.querySelectorAll(".formLabel");
-const formInputs = document.querySelectorAll(".formInput");
-console.log(formInputs,formLabels);
-
 /** 
  *  formLabelAnimation
  * Adds an animation to labels whose corresponding inputs have been focused.
  * @param {NodeList} inputs - Nodelist of inputs to be targeted.
  * @param {NodeList} labels - Corresponding NodeList of labels related to inputs
- * @returns {void} - returns nothing, only changes classes of targeted elements
+ * @returns {void}
 */
-const formLabelAnimation = (inputs,labels) =>{
+export const formLabelAnimation = (inputs,labels) =>{
   inputs.forEach((input,index)=>{
     const label = labels[index];
     input.addEventListener("focus",()=>{
@@ -108,15 +106,13 @@ const formLabelAnimation = (inputs,labels) =>{
   })
 };
 
-
-const backToTopDiv = document.querySelector(".backToTop");
 /**
  * BackToTop
  * Displays a button at a certain Y index  that brings the user back to the top of the page.
  * @param {HTMLElement} element - Element to attach event listener to, and change styles of.
- * @returns {void} returns nothing, only resets the scrollY position to 0.
+ * @returns {void} 
  */
-  const backToTop = (element) =>{
+  export const backToTop = (element) =>{
     element.addEventListener("click", ()=>{
       window.scrollTo(0,0);
     });
@@ -131,35 +127,3 @@ const backToTopDiv = document.querySelector(".backToTop");
       }
     });
   };
-
-
-// Note: scrapped  this idea (2023-09-28), keeping js incase mind changes.
-
-// Toronto Skyline SVG animation on view.
-// const storyBlock = document.querySelector(".story-block");
-// const torontoSvgContainer = document.querySelector(".skylineContainer")
-// const torontoSvgPath = document.querySelector("svg.torontoSkyline path")
-
-
-// const observeStoryBlock = new IntersectionObserver(entries =>{
-//   entries.forEach(entry =>{
-//     if(entry.isIntersecting){
-//       torontoSvgContainer.classList.add("visible");
-//       torontoSvgPath.classList.add('torontoSkyline-1');
-//     }
-//   });
-// });
-
-//observeStoryBlock.observe(storyBlock);
-
-
-
-// page load
-setTimeout(()=>typeEffect(),200);
-formspreeHandling();
-formLabelAnimation(formInputs,formLabels);
-backToTop(backToTopDiv);
-
-
-
-
