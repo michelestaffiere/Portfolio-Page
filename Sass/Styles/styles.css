@@ -510,6 +510,18 @@ h1 span.typing::before {
 .project-brief h2 {
   font-size: 2rem;
   margin: 0;
+  position: relative;
+}
+
+.updating {
+  position: absolute;
+  top: -3rem;
+  left: 0rem;
+  background-color: rgb(249, 126, 237);
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 0.5rem;
 }
 
 .project-brief p {
