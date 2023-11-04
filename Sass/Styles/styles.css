@@ -645,7 +645,7 @@ h1 span.typing::before {
 
 /* Contact Form */
 .contact {
-  margin-bottom: 5rem;
+  margin-bottom: 12rem;
   display: flex;
   gap: 1rem;
   flex-direction: column;
