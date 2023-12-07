@@ -4,6 +4,7 @@ import {
   formspreeHandling,
   formLabelAnimation,
   backToTop,
+  formBehaviour
 } from "./scripts.js";
 
 // Rotating text hero animation
@@ -26,4 +27,5 @@ const backToTopDiv = document.querySelector(".backToTop");
 setTimeout(() => typeEffect(), 200);
 formspreeHandling();
 formLabelAnimation(formInputs, formLabels);
+formBehaviour(formInputs);
 backToTop(backToTopDiv);

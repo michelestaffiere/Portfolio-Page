@@ -106,6 +106,22 @@ export const formLabelAnimation = (inputs,labels) =>{
   })
 };
 
+export const formBehaviour = (inputs) => {
+  inputs.forEach((input, index) => {
+    input.addEventListener("input", (e) => {
+      const label = input.previousElementSibling;
+      if (input.value !== "") {
+        label.classList.add("filled");
+        console.log('text inside');
+      } else {
+        label.classList.remove("filled");
+        console.log('no text inside');
+      }
+    });
+  });
+};
+
+
 /**
  * BackToTop
  * Displays a button at a certain Y index  that brings the user back to the top of the page.

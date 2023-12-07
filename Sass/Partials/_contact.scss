@@ -73,6 +73,11 @@
        background-color: rgba(0, 0, 0, 0.500);
        color: white;
    }
+
+   // if form is filled out apply this
+    .inputContainer .filled{
+      color: #cf91c9;
+    }
    
    .contact ul{
      margin: 0;
