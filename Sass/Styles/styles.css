@@ -535,6 +535,7 @@ h1 span.typing::before {
   display: flex;
   list-style: none;
   gap: 1.15rem;
+  align-items: center;
 }
 
 .links a {
@@ -571,6 +572,10 @@ h1 span.typing::before {
 .stack .html-css img:nth-child(1) {
   left: 0.25rem;
   z-index: 98; /* on top of HTML svg. */
+}
+
+.stack p {
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 500px) {

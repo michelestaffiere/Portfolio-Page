@@ -7,17 +7,19 @@ import {
   formBehaviour
 } from "./scripts.js";
 
-// Rotating text hero animation
-const rotatingText = document.querySelector(".rotating-text p");
-rotatingText.innerHTML = rotatingText.innerText
-  .split("")
-  .map(
-    (character, index) =>
-      `<span style="transform:rotate(${
-        index * 9.5
-      }deg)">${character.toUpperCase()}</span>`
-  )
-  .join("");
+// Rotating text hero animation - not in use.
+// const rotatingText = document.querySelector(".rotating-text p");
+// rotatingText.innerHTML = rotatingText.innerText
+//   .split("")
+//   .map(
+//     (character, index) =>
+//       `<span style="transform:rotate(${
+//         index * 9.5
+//       }deg)">${character.toUpperCase()}</span>`
+//   )
+//   .join("");
+
+
 // Variables
 const formLabels = document.querySelectorAll(".formLabel");
 const formInputs = document.querySelectorAll(".formInput");

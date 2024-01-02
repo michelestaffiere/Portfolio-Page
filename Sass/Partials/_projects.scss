@@ -55,6 +55,7 @@
      display: flex;
      list-style: none;
      gap: 1.15rem;
+     align-items: center;
    }
    .links a {
      cursor: pointer;
@@ -85,6 +86,9 @@
    .stack .html-css img:nth-child(1) {
      left: .25rem;
      z-index: 98; /* on top of HTML svg. */
+   }
+   .stack p {
+    font-size: 2rem;
    }
 
 
